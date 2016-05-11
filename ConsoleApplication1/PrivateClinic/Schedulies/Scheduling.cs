@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace PrivateClinic.Schedulies
 {
-    public class Records
+    public class Scheduling
     {
+        
     }
 }
