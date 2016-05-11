@@ -25,6 +25,7 @@ namespace PrivateClinic
             History history = new History(patient, doctor);
 
             /*-----------------------------------------------------------------*/
+            /*---------------------- Test History -----------------------------*/
 
             Console.WriteLine("Treatment:");
             string treat = Console.ReadLine();
@@ -37,7 +38,8 @@ namespace PrivateClinic
             history.CreateCourseTreatment(new CourseTreatment(course));
             history.PrintHistory();
             
-            /*-----------------------------------------------------------------*
+            /*-----------------------------------------------------------------*/
+            /*------------------- Test Administrator --------------------------*/
 
             Console.WriteLine(" *** Administrator *** ");
             while (true)
@@ -57,7 +59,8 @@ namespace PrivateClinic
             admin.Logout();
             Console.WriteLine();
 
-            /*-----------------------------------------------------------------*
+            /*-----------------------------------------------------------------*/
+            /*----------------------- Test Doctor -----------------------------*/
 
             Console.WriteLine(" *** Doctor *** ");
             while (true)
@@ -77,7 +80,8 @@ namespace PrivateClinic
             doctor.Logout();
             Console.WriteLine();
 
-            /*-----------------------------------------------------------------*
+            /*-----------------------------------------------------------------*/
+            /*---------------------- Test Operator ----------------------------*/
 
             Console.WriteLine(" *** Operator *** ");
             while (true)
@@ -97,7 +101,8 @@ namespace PrivateClinic
             operat.Logout();
             Console.WriteLine();
 
-            /*-----------------------------------------------------------------*
+            /*-----------------------------------------------------------------*/
+            /*------------------- Test Authorless Patient ---------------------*/
 
             Console.WriteLine(" *** Authorless Patient *** ");
             while (true)
