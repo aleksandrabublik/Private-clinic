@@ -18,36 +18,11 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
-            testUsers();
-          
+            List<User> Users = testCreateUsers();
+
         }
-       
-        static void testAppointnents() { }
-        static void testDrugs() { }
-        static void testHistories() {
-            /*-----------------------------------------------------------------*/
-            /*---------------------- Test History -----------------------------*/
-            /*
-            Console.WriteLine(" *** History *** ");
 
-            Console.WriteLine("Treatment:");
-            string treat = Console.ReadLine();
-            history.EditTreatment(treat);
-
-            Console.WriteLine("Prescription:");
-            string pres = Console.ReadLine();
-            history.EditPrescription(pres);
-
-            Console.WriteLine("Cource of Treatment:");
-            string course = Console.ReadLine();
-
-            history.CreateCourseTreatment(new CourseTreatment(course));
-
-            history.PrintHistory();
-            */
-        }
-        static void testSchedulies() { }
-        static void testUsers()
+        static List<User> testCreateUsers()
         {
             List<User> Users = new List<User>();
 
@@ -93,25 +68,33 @@ namespace PrivateClinic
 
                     switch (n_role)
                     {
-                        case 1: Users.Add(new     Administrator(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
-                        case 2: Users.Add(new            Doctor(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
-                        case 3: Users.Add(new          Operator(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
-                        case 4: Users.Add(new AuthorlessPatient(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
+                        case 1: Users.Add(new Administrator(f_name, l_name)); break;
+                        case 2: Users.Add(new Doctor(f_name, l_name)); break;
+                        case 3: Users.Add(new Operator(f_name, l_name)); break;
+                        case 4: Users.Add(new AuthorlessPatient(f_name, l_name)); break;
                     }
                     Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine();
 
-                    
-                    ex = "a"; 
+                    ex = "a";
                     while (ex == "a")
                     {
                         Console.Write("Create new account? (y/n): "); ;
                         ex = Console.ReadLine();
                         if (ex == "n")
+                        {
                             exit = true;
+                            Console.WriteLine();
+                            for (int i = 0; i < Users.Count; i++)
+                            {
+                                Users.ElementAt(i).PrintInfo();
+                                Console.WriteLine();
+                            }
+                        }
                     }
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
 
                 }
                 catch (Exception e)
@@ -121,6 +104,38 @@ namespace PrivateClinic
                     Console.WriteLine();
                 }
             }
+
+            return Users;
+        }
+
+        static void testAppointnents() { }
+        static void testDrugs() { }
+        static void testHistories() {
+            /*-----------------------------------------------------------------*/
+            /*---------------------- Test History -----------------------------*/
+            /*
+            Console.WriteLine(" *** History *** ");
+
+            Console.WriteLine("Treatment:");
+            string treat = Console.ReadLine();
+            history.EditTreatment(treat);
+
+            Console.WriteLine("Prescription:");
+            string pres = Console.ReadLine();
+            history.EditPrescription(pres);
+
+            Console.WriteLine("Cource of Treatment:");
+            string course = Console.ReadLine();
+
+            history.CreateCourseTreatment(new CourseTreatment(course));
+
+            history.PrintHistory();
+            */
+        }
+        static void testSchedulies() { }
+        static void testUsers()
+        {
+            
 
             
 
