@@ -11,45 +11,139 @@ using PrivateClinic.Users;
 
 namespace PrivateClinic
 {
+
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            string fname, lname;
-
-            Administrator admin = new Administrator("Ivan", "Sergeev");
-            Doctor doctor = new Doctor("Sergei", "Ivanov");
-            Operator operat = new Operator("Petr", "Petrov");
-            AuthorlessPatient patient = new AuthorlessPatient("Vasja", "");
-
-            History history = new History(patient, doctor);
-
+            testUsers();
+          
+        }
+       
+        static void testAppointnents() { }
+        static void testDrugs() { }
+        static void testHistories() {
             /*-----------------------------------------------------------------*/
             /*---------------------- Test History -----------------------------*/
+            /*
+            Console.WriteLine(" *** History *** ");
 
             Console.WriteLine("Treatment:");
             string treat = Console.ReadLine();
             history.EditTreatment(treat);
+
             Console.WriteLine("Prescription:");
             string pres = Console.ReadLine();
             history.EditPrescription(pres);
+
             Console.WriteLine("Cource of Treatment:");
             string course = Console.ReadLine();
+
             history.CreateCourseTreatment(new CourseTreatment(course));
+
             history.PrintHistory();
+            */
+        }
+        static void testSchedulies() { }
+        static void testUsers()
+        {
+            List<User> Users = new List<User>();
+
+            Console.WriteLine();
+            Console.WriteLine(" ***  CREATE USER  *** ");
+            Console.WriteLine();
+
+            string f_name, l_name;
+            int n_role = 0;
+            bool exit = false;
+
+            while (!exit)
+            {
+                try
+                {
+                    Console.Write("First name: ");
+                    f_name = Console.ReadLine();
+
+                    Console.Write("Last name: ");
+                    l_name = Console.ReadLine();
+
+                    Console.WriteLine();
+                    Console.WriteLine("Changed role:");
+                    Console.WriteLine(" 1. Administrator");
+                    Console.WriteLine(" 2. Doctor");
+                    Console.WriteLine(" 3. Operator");
+                    Console.WriteLine(" 4. Authoreless patient");
+                    Console.WriteLine();
+
+                    while (n_role < 1 || n_role > 4)
+                    {
+                        Console.Write("Your role: ");
+                        n_role = Convert.ToInt32(Console.ReadLine());
+                        if (n_role < 1 || n_role > 4)
+                            Console.WriteLine("Changed number role (1 - 4).");
+                    }
+
+                    Console.WriteLine();
+                    Console.WriteLine("Account create!");
+                    Console.WriteLine();
+
+                    switch (n_role)
+                    {
+                        case 1: Users.Add(new     Administrator(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
+                        case 2: Users.Add(new            Doctor(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
+                        case 3: Users.Add(new          Operator(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
+                        case 4: Users.Add(new AuthorlessPatient(f_name, l_name)); Users.ElementAt(Users.Count-1).PrintInfo(); break;
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+
+                    
+                    string ex = "a"; 
+                    while (ex == "a")
+                    {
+                        Console.Write("Create new account? (y/n): "); ;
+                        ex = Console.ReadLine();
+                        if (ex == "n")
+                            exit = true;
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                }
+            }
+
             
+
+
+
+
+
+
+
+
             /*-----------------------------------------------------------------*/
             /*------------------- Test Administrator --------------------------*/
-
+            /*
             Console.WriteLine(" *** Administrator *** ");
             while (true)
             {
-                Console.WritegsLine();
+                Console.WriteLine();
+
                 Console.Write("First Name: ");
                 fname = Console.ReadLine();
+
                 Console.Write("Last name: ");
                 lname = Console.ReadLine();
                 Console.WriteLine();
+
                 if (admin.Login(fname, lname))
                     break;
             }
@@ -61,7 +155,7 @@ namespace PrivateClinic
 
             /*-----------------------------------------------------------------*/
             /*----------------------- Test Doctor -----------------------------*/
-
+            /*
             Console.WriteLine(" *** Doctor *** ");
             while (true)
             {
@@ -82,7 +176,7 @@ namespace PrivateClinic
 
             /*-----------------------------------------------------------------*/
             /*---------------------- Test Operator ----------------------------*/
-
+            /*
             Console.WriteLine(" *** Operator *** ");
             while (true)
             {
@@ -103,7 +197,7 @@ namespace PrivateClinic
 
             /*-----------------------------------------------------------------*/
             /*------------------- Test Authorless Patient ---------------------*/
-
+            /*
             Console.WriteLine(" *** Authorless Patient *** ");
             while (true)
             {
@@ -121,7 +215,7 @@ namespace PrivateClinic
             Console.WriteLine();
             patient.Logout();
             Console.WriteLine();
-
+            
             /*-----------------------------------------------------------------*/
 
         }

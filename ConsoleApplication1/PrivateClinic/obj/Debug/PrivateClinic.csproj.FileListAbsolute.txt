@@ -4,3 +4,9 @@ c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClini
 c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
 c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.exe
 c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.pdb
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.exe.config
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.exe
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.pdb
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.exe
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.pdb
+C:\Users\Vladislav\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
