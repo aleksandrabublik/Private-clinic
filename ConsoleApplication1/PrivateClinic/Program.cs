@@ -56,8 +56,9 @@ namespace PrivateClinic
             Console.WriteLine();
 
             string f_name, l_name;
-            int n_role = 0;
+            int n_role;
             bool exit = false;
+            string ex;
 
             while (!exit)
             {
@@ -77,6 +78,7 @@ namespace PrivateClinic
                     Console.WriteLine(" 4. Authoreless patient");
                     Console.WriteLine();
 
+                    n_role = 0;
                     while (n_role < 1 || n_role > 4)
                     {
                         Console.Write("Your role: ");
@@ -102,7 +104,7 @@ namespace PrivateClinic
                     Console.WriteLine();
 
                     
-                    string ex = "a"; 
+                    ex = "a"; 
                     while (ex == "a")
                     {
                         Console.Write("Create new account? (y/n): "); ;
