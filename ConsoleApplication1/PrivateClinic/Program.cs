@@ -19,7 +19,7 @@ namespace PrivateClinic
         static void Main(string[] args)
         {
             List<User> Users = testCreateUsers();
-
+            testLoginUsers(Users);
         }
 
         static List<User> testCreateUsers()
@@ -107,6 +107,52 @@ namespace PrivateClinic
 
             return Users;
         }
+        static void testLoginUsers(List<User> users)
+        {
+            string fname, lname;
+            bool exit = false;
+            string ex;
+
+            while (!exit)
+            {
+                Console.WriteLine();
+
+                Console.Write("First Name: ");
+                fname = Console.ReadLine();
+
+                Console.Write("Last name: ");
+                lname = Console.ReadLine();
+                Console.WriteLine();
+
+                for (int i = 0; i < users.Count; i++)
+                {
+                    if (users[i].Login(fname, lname))
+                    {
+                        users[i].Logout();
+                        break;
+                    }
+                    else if (i == users.Count - 1)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("You not create account!");
+                    }
+                }
+
+                Console.WriteLine();
+
+                ex = "a";
+                while (ex == "a")
+                {
+                    Console.Write("Login next account? (y/n): "); ;
+                    ex = Console.ReadLine();
+                    if (ex == "n")
+                    {
+                        exit = true;
+                        Console.WriteLine();
+                    }
+                }
+            }
+        }
 
         static void testAppointnents() { }
         static void testDrugs() { }
@@ -135,16 +181,7 @@ namespace PrivateClinic
         static void testSchedulies() { }
         static void testUsers()
         {
-            
-
-            
-
-
-
-
-
-
-
+         
 
             /*-----------------------------------------------------------------*/
             /*------------------- Test Administrator --------------------------*/
