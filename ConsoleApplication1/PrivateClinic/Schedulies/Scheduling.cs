@@ -49,15 +49,14 @@ namespace PrivateClinic.Schedulies
             Console.WriteLine("Records: ");
             for (int i = 0; i < Schedule.Count(); i ++)
             {
-<<<<<<< HEAD
+
                 Console.WriteLine(Schedule[i].toString());
-=======
+
                 Console.WriteLine("Record Time:" + Schedule[i].Date.ToString("F",CultureInfo.CreateSpecificCulture("en-US")));
                 Console.WriteLine();
                 Console.WriteLine("Patient Name: " + Schedule[i].Patient.FirstName + " " + Schedule[i].Patient.LastName);
                 Console.WriteLine();
                 Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.LastName);
->>>>>>> bb6a01d4faade9da84ca304c165a8e2ad99b8d6f
                 Console.WriteLine();
 
             }
