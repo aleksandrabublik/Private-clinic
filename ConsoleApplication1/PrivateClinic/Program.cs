@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using PrivateClinic.Appointments;
 using PrivateClinic.Drugs;
@@ -18,8 +16,9 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
-            List<User> Users = testCreateUsers();
-            testLoginUsers(Users);
+            //List<User> Users = testCreateUsers();
+            //testLoginUsers(Users);
+            testAppointnents();
         }
 
         static List<User> testCreateUsers()
@@ -113,6 +112,11 @@ namespace PrivateClinic
             bool exit = false;
             string ex;
 
+            Console.WriteLine();
+            Console.WriteLine(" ***  TEST LOGIN/LOGOUT  *** ");
+            Console.WriteLine();
+
+
             while (!exit)
             {
                 Console.WriteLine();
@@ -153,9 +157,101 @@ namespace PrivateClinic
                 }
             }
         }
+        static void testAppointnents()
+        {
+            string nameList;
+            string nameAppointment;
 
-        static void testAppointnents() { }
-        static void testDrugs() { }
+            bool exit = false;
+            string ex;
+
+            Console.WriteLine();
+            Console.WriteLine(" ***  TEST APPOINTMENTS  *** ");
+            Console.WriteLine();
+
+            while (!exit)
+            {
+                
+
+
+            }
+
+        }
+        static void testDrugs()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" ***  TEST DRAGS *** ");
+            Console.WriteLine();
+
+            string _drugsName, fubricator;
+            bool Prescription;
+            DateTime fData, sData;
+            double price;
+            bool exit = false;
+
+            Administrator Admin = new Administrator("Wasya", "Pupkin");
+            MedicinesList MedList = Admin.CreateMedicinesList();
+
+            while (!exit)
+            {
+                try
+                {
+                    Console.Write("Drugs name: ");
+                    _drugsName = Console.ReadLine();
+
+                    Console.Write("Manufacture data: ");
+                    fData = DateTime.Parse(Console.ReadLine());
+
+                    Console.Write("Expiration data: ");
+                    sData = DateTime.Parse(Console.ReadLine());
+
+
+
+                    Console.Write("Fubricator name: ");
+                    fubricator = Console.ReadLine();
+
+                    Console.Write("Prescription need? (y/n):");
+                    {
+                        if (Console.ReadLine() == "y")
+                        {
+                            Prescription = true;
+                        }
+                        else
+                        {
+                            Prescription = false;
+                        }
+                    }
+
+                    Console.Write("Entered price: ");
+                    price = double.Parse(Console.ReadLine());
+                    Medicine Drug = new Medicine(_drugsName, fData, sData, fubricator, Prescription, price);
+                    MedList.AddMedicine(Drug);
+                    string a = "a";
+                    while (a == "a")
+                    {
+                        Console.Write("Add new Drug? (y/n): "); ;
+                        a = Console.ReadLine();
+                        if (a == "n")
+                        {
+                            exit = true;
+                            MedList.PrintInfo();
+                            Console.WriteLine();
+
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                }
+            }
+
+
+
+        }
+
         static void testHistories() {
             /*-----------------------------------------------------------------*/
             /*---------------------- Test History -----------------------------*/

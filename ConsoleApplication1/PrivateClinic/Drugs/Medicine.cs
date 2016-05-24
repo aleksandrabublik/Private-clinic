@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrivateClinic.Drugs
 {
     public class Medicine
     {
         public string Name { get; set; }
-        public DateTime YearManufacture { get; set; }
-        public DateTime ExpirationDate { get; set; }
-        public string Fabricator { get; set; }
+        public DateTime YearManufacture { get; private set; }
+        public DateTime ExpirationDate { get; private set; }
+        public string Fabricator { get; private set; }
         public bool IssuedPrescription { get; set; }
-        public double Price { get; set; }
+        public double Price { get; private set; }
 
         public Medicine(
             string _name, 
@@ -28,6 +24,12 @@ namespace PrivateClinic.Drugs
             ExpirationDate = _expiration;
             Fabricator = _fabricator;
             IssuedPrescription = _issuedPrescription;
+            Price = _price;
+        }
+
+
+        public void ChangePrice(double _price)
+        {
             Price = _price;
         }
 
