@@ -287,30 +287,10 @@ namespace PrivateClinic
 
 
         }
+        static void testSchedulies()
+        {
 
-        static void testHistories() {
-            /*-----------------------------------------------------------------*/
-            /*---------------------- Test History -----------------------------*/
-            /*
-            Console.WriteLine(" *** History *** ");
-
-            Console.WriteLine("Treatment:");
-            string treat = Console.ReadLine();
-            history.EditTreatment(treat);
-
-            Console.WriteLine("Prescription:");
-            string pres = Console.ReadLine();
-            history.EditPrescription(pres);
-
-            Console.WriteLine("Cource of Treatment:");
-            string course = Console.ReadLine();
-
-            history.CreateCourseTreatment(new CourseTreatment(course));
-
-            history.PrintHistory();
-            */
         }
-        static void testSchedulies() { }
         
     }
 }
