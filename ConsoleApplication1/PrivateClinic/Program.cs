@@ -16,23 +16,13 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            List<User> Users = testCreateUsers();
-            testLoginUsers(Users);
-            testDrugs();
-            testAppointnents();
-            testHistories();
 
-            
-
-=======
            //List<User> Users = testCreateUsers();
            //testLoginUsers(Users);
             //testDrugs();
             //testAppointnents();
             //testHistories();
             testSchedulies();
->>>>>>> 471195ff0d02fd97cfc6ceb97880efbfaa3eb23a
         }
 
         static List<User> testCreateUsers()
@@ -300,7 +290,6 @@ namespace PrivateClinic
 
 
         }
-
         static void testHistories() {
             string Prescription, CourseTreatmen, Recomendation;
 

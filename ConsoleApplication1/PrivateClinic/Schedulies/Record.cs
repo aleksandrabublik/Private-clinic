@@ -20,5 +20,20 @@ namespace PrivateClinic.Schedulies
             Patient = _patiet;
             Date = _date;
         }
+
+        public string toString()
+        {
+            string info = "";
+
+            info += Patient.FirstName + " " + Patient.LastName + "\n";
+            info += "-------------------------------------\n";
+            info += "Date: " + Date.Day + " " + Date.Month + " " + Date.Year + "\n";
+            info += "Time: " + Date.Hour + ":" + Date.Minute + "\n";
+            info += "-------------------------------------\n";
+            info += "Procedure | " + Procedure.Name + "\n";
+            info += "Doctor    | " + Procedure.Doctor.FirstName + " " + Procedure.Doctor.LastName +  "\n";
+            
+            return info;
+        }
     }
 }

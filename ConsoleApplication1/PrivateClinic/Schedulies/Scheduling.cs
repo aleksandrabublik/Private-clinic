@@ -9,6 +9,7 @@ namespace PrivateClinic.Schedulies
     public class Scheduling
     {
         public List<Record> Schedule { get; private set; }
+
         public Scheduling ()
         {
             Schedule = new List<Record>();
@@ -30,17 +31,13 @@ namespace PrivateClinic.Schedulies
         }
         public void PrintSchedule()
         {
+            Console.WriteLine("Records: ");
             for (int i = 0; i < Schedule.Count(); i ++)
             {
-                Console.WriteLine("Record Time: " + Schedule[i].Date);
+                Console.WriteLine(Schedule[i].toString());
                 Console.WriteLine();
-                Console.WriteLine("Patient Name: " + Schedule[i].Patient.FirstName + " " + Schedule[i].Patient.LastName);
-                Console.WriteLine();
-                Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.LastName);
-                Console.WriteLine();
-                Console.WriteLine("Procedure: " + Schedule[i].Procedure.Name + " Price: $" + Schedule[i].Procedure.Price );
-                Console.WriteLine();
-            }   
+
+            }
         }       
     }
 }
