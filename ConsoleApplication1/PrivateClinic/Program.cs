@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using System.Globalization;
+
 using PrivateClinic.Appointments;
 using PrivateClinic.Drugs;
 using PrivateClinic.Historyes;
@@ -332,8 +334,10 @@ namespace PrivateClinic
                             Appointment Procedura = new Appointment("Klizma", 50, Docer);
                             AuthorlessPatient Patient = new AuthorlessPatient("Super", "Vlad");
                             Console.WriteLine("Chose time");
-                            DateTime data = Convert.ToDateTime(Console.ReadLine());
-                            Record newRecord = new Record(Procedura, Patient, data);
+                          //  DateTime data = Convert.ToDateTime(Console.ReadLine());
+                            DateTime date1 = Convert.ToDateTime(Console.ReadLine());// new DateTime(2008, 4, 10, 6, 30, 0);
+
+                            Record newRecord = new Record(Procedura, Patient, date1);
                             NewSchedule.Schedule.Add(newRecord);
 
 
