@@ -50,6 +50,7 @@
     <Compile Include="Drugs\MedicinesList.cs" />
     <Compile Include="Historyes\CourseTreatment.cs" />
     <Compile Include="Historyes\History.cs" />
+    <Compile Include="Schedulies\Record.cs" />
     <Compile Include="Schedulies\Scheduling.cs" />
     <Compile Include="Users\Administrator.cs" />
     <Compile Include="Users\AuthorlessPatient.cs" />

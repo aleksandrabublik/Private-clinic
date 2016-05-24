@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using PrivateClinic.Drugs;
+using PrivateClinic.Schedulies;
 
 namespace PrivateClinic.Users
 {
@@ -24,7 +25,11 @@ namespace PrivateClinic.Users
             return MedList;
         }
 
-        
+        public Scheduling CreateScheduling()
+        {
+            Scheduling Schedule = new Scheduling();
+            return Schedule;
+        }
 
     }
 }

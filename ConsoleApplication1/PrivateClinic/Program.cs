@@ -6,7 +6,7 @@ using PrivateClinic.Appointments;
 using PrivateClinic.Drugs;
 using PrivateClinic.Historyes;
 using PrivateClinic.Users;
-
+using PrivateClinic.Schedulies;
 namespace PrivateClinic
 {
 
@@ -16,6 +16,7 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             List<User> Users = testCreateUsers();
             testLoginUsers(Users);
             testDrugs();
@@ -24,6 +25,14 @@ namespace PrivateClinic
 
             
 
+=======
+           //List<User> Users = testCreateUsers();
+           //testLoginUsers(Users);
+            //testDrugs();
+            //testAppointnents();
+            //testHistories();
+            testSchedulies();
+>>>>>>> 471195ff0d02fd97cfc6ceb97880efbfaa3eb23a
         }
 
         static List<User> testCreateUsers()
@@ -321,7 +330,48 @@ namespace PrivateClinic
 
             newHistory.PrintHistory();
         }
-        static void testSchedulies() { }
+        static void testSchedulies() {
+            bool exit = false;
+            
+            while (!exit)
+            {
+                try
+                     {
+                            Administrator Admin = new Administrator("Supet", "Max");
+                            Scheduling NewSchedule = Admin.CreateScheduling();
+                            Doctor Docer = new Doctor("Gregory", "House");
+                            Appointment Procedura = new Appointment("Klizma", 50, Docer);
+                            AuthorlessPatient Patient = new AuthorlessPatient("Super", "Vlad");
+                            Console.WriteLine("Chose time");
+                            DateTime data = Convert.ToDateTime(Console.ReadLine());
+                            Record newRecord = new Record(Procedura, Patient, data);
+                            NewSchedule.Schedule.Add(newRecord);
+
+
+                             string a = "a";
+                                while (a == "a")
+                                {
+                                    Console.Write("Add new procedure? (y/n): "); ;
+                                    a = Console.ReadLine();
+                                    if (a == "n")
+                                    {
+                                        exit = true;
+                                        NewSchedule.PrintSchedule();
+                                        Console.WriteLine();
+
+                                    }
+                                }
+                       }
+                catch (Exception e)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine();
+                }
+            }
+            
+
+        }
         
     }
 }
