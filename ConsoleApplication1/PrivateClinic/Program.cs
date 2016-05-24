@@ -161,6 +161,7 @@ namespace PrivateClinic
         {
             string nameList;
             string nameAppointment;
+            double price;
 
             bool exit = false;
             string ex;
@@ -169,10 +170,44 @@ namespace PrivateClinic
             Console.WriteLine(" ***  TEST APPOINTMENTS  *** ");
             Console.WriteLine();
 
+            Console.WriteLine("Creating price list.");
+            Console.Write("Name: ");
+            nameList = Console.ReadLine();
+            PriceListAppointments priceList = new PriceListAppointments(nameList);
+            Console.WriteLine();
+            Console.WriteLine("Price list is created!");
+
+            Doctor House = new Doctor("House", "Gragory");
+
+
+            Console.WriteLine();
+            Console.WriteLine("Create appointments.");
             while (!exit)
             {
-                
+                Console.Write("Name: ");
+                nameAppointment = Console.ReadLine();
 
+                Console.Write("Price: $");
+                price = Convert.ToDouble(Console.ReadLine());
+
+                priceList.AddAppointment(new Appointment(nameAppointment, price, House));
+
+                Console.WriteLine();
+
+                ex = "a";
+                while (ex == "a")
+                {
+                    Console.Write("Create new appointment? (y/n): "); ;
+                    ex = Console.ReadLine();
+                    if (ex == "n")
+                    {
+                        exit = true;
+                        Console.WriteLine();
+                    }
+                }
+
+                if (exit)
+                    Console.WriteLine(priceList.toString());
 
             }
 

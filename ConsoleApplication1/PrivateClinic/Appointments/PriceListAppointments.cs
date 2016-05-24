@@ -52,6 +52,7 @@ namespace PrivateClinic.Appointments
         {
             string pricelist = "";
 
+            pricelist += "Price list:\n";
             for (int i = 0; i < ListAppointment.Count(); i++)
             {
                 pricelist += (i + 1) +  ". " + ListAppointment[i].toString() + "\n";
