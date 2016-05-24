@@ -16,8 +16,9 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
-            //List<User> Users = testCreateUsers();
-            //testLoginUsers(Users);
+            List<User> Users = testCreateUsers();
+            testLoginUsers(Users);
+            testDrugs();
             testAppointnents();
         }
 
