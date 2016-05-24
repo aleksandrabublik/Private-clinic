@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PrivateClinic.Schedulies
 {
@@ -13,6 +14,20 @@ namespace PrivateClinic.Schedulies
         public Scheduling ()
         {
             Schedule = new List<Record>();
+        }
+        public bool CheckRecord (Record _rec)
+        {
+            bool a = true;
+            for (int i = 0; i < Schedule.Count(); i ++)
+            {
+                if (Schedule[i].Date == _rec.Date && Schedule[i].Procedure.Doctor.FirstName == _rec.Procedure.Doctor.FirstName)
+                {
+                    a = false;
+                }
+                else a = true;  
+            }
+            return a;
+           
         }
         public void AddRecord (Record _rec)
         {
@@ -34,7 +49,15 @@ namespace PrivateClinic.Schedulies
             Console.WriteLine("Records: ");
             for (int i = 0; i < Schedule.Count(); i ++)
             {
+<<<<<<< HEAD
                 Console.WriteLine(Schedule[i].toString());
+=======
+                Console.WriteLine("Record Time:" + Schedule[i].Date.ToString("F",CultureInfo.CreateSpecificCulture("en-US")));
+                Console.WriteLine();
+                Console.WriteLine("Patient Name: " + Schedule[i].Patient.FirstName + " " + Schedule[i].Patient.LastName);
+                Console.WriteLine();
+                Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.LastName);
+>>>>>>> bb6a01d4faade9da84ca304c165a8e2ad99b8d6f
                 Console.WriteLine();
 
             }
