@@ -16,3 +16,9 @@ C:\Users\Яна\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\D
 C:\Users\Яна\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
 C:\Users\Яна\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.exe
 C:\Users\Яна\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.pdb
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.exe.config
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.exe
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.pdb
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.exe
+C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.pdb
