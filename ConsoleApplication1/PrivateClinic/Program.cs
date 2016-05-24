@@ -332,8 +332,8 @@ namespace PrivateClinic
                             Appointment Procedura = new Appointment("Klizma", 50, Docer);
                             AuthorlessPatient Patient = new AuthorlessPatient("Super", "Vlad");
                             Console.WriteLine("Chose time");
-                            DateTime date = DateTime.Parse(Console.ReadLine());
-                            Record newRecord = new Record(Procedura, Patient, date);
+                            DateTime data = Convert.ToDateTime(Console.ReadLine());
+                            Record newRecord = new Record(Procedura, Patient, data);
                             NewSchedule.Schedule.Add(newRecord);
 
 

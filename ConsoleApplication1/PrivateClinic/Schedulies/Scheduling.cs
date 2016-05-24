@@ -36,9 +36,9 @@ namespace PrivateClinic.Schedulies
                 Console.WriteLine();
                 Console.WriteLine("Patient Name: " + Schedule[i].Patient.FirstName + " " + Schedule[i].Patient.LastName);
                 Console.WriteLine();
-                Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.FirstName);
+                Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.LastName);
                 Console.WriteLine();
-                Console.WriteLine("Procedure: " + Schedule[i].Procedure.Name + " Price: " + Schedule[i].Procedure.Price);
+                Console.WriteLine("Procedure: " + Schedule[i].Procedure.Name + " Price: $" + Schedule[i].Procedure.Price );
                 Console.WriteLine();
             }   
         }       
