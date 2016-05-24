@@ -16,10 +16,11 @@ namespace PrivateClinic
 
         static void Main(string[] args)
         {
-            List<User> Users = testCreateUsers();
+           List<User> Users = testCreateUsers();
             testLoginUsers(Users);
             testDrugs();
             testAppointnents();
+            testHistories();
         }
 
         static List<User> testCreateUsers()
@@ -287,10 +288,37 @@ namespace PrivateClinic
 
 
         }
-        static void testSchedulies()
-        {
 
+        static void testHistories() {
+            string Prescription, CourseTreatmen, Recomendation;
+
+            Medicine Aspirin = new Medicine("Aspirin", new DateTime(1996, 01, 01), new DateTime(2010, 01, 01), "Zavod Pupkina", true, 3);
+
+            Console.WriteLine("---------------------- Test History -----------------------------");
+            AuthorlessPatient Patient = new AuthorlessPatient("Super", "Max");
+            Doctor Docer = new Doctor("Gregory", "House");
+            History newHistory = Docer.CreateHistory(Patient);
+            newHistory.CreateDrageList();
+
+            Console.WriteLine("Write some Prescription");
+            Prescription = Console.ReadLine();
+            newHistory.EditPrescription(Prescription);
+            Console.WriteLine("Add some drugs");
+            newHistory.AddDragsForPatient(Aspirin);
+
+            Console.WriteLine("Add some recomendation");
+            Recomendation = Console.ReadLine();
+            newHistory.EditTreatment(Recomendation);
+
+
+            Console.WriteLine("Write Course Treatment for patient");
+            CourseTreatmen = Patient.FirstName + Patient.LastName + ", " + Console.ReadLine();
+            CourseTreatment CourseTreatmentForPatient = new CourseTreatment(CourseTreatmen);
+            newHistory.CreateCourseTreatment(CourseTreatmentForPatient);
+
+            newHistory.PrintHistory();
         }
+        static void testSchedulies() { }
         
     }
 }
