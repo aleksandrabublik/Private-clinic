@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PrivateClinic.Appointments.Appointment">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQgAAAAEAAAABAQAAAAAAAQAAAAAAAAAgAA=</HashCode>
+      <FileName>Appointments\Appointment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Appointments.PriceListAppointments">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAABAQAAAAEAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>Appointments\PriceListAppointments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Drugs.Medicine">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAYAAABAAAAAAgAQAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Drugs\Medicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Drugs.MedicinesList">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAECAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Drugs\MedicinesList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Historyes.CourseTreatment">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Historyes\CourseTreatment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Historyes.History">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAARAAEAEAAAAAACAIBAIIBAAAAAAAAACAAEIAAAAAA=</HashCode>
+      <FileName>Historyes\History.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Schedulies.Scheduling">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schedulies\Scheduling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.Administrator" Collapsed="true">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Administrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.AuthorlessPatient" Collapsed="true">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\AuthorlessPatient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.Doctor" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.Nurse" Collapsed="true">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Nurse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.Operator" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PrivateClinic.Users.User" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAEEAAAAIAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Users\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
