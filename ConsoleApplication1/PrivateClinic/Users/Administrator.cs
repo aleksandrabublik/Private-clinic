@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using PrivateClinic.Drugs;
+﻿using PrivateClinic.Drugs;
 using PrivateClinic.Schedulies;
 
 namespace PrivateClinic.Users
@@ -29,6 +23,29 @@ namespace PrivateClinic.Users
         {
             Scheduling Schedule = new Scheduling();
             return Schedule;
+        }
+
+        public Scheduling Scheduling
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+        public MedicinesList MedicinesList
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
         }
 
     }

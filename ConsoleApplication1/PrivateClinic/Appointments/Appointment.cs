@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using PrivateClinic.Users;
 
@@ -13,6 +9,18 @@ namespace PrivateClinic.Appointments
         public string Name { get; private set; }
         public double Price { get; private set; }
         public Doctor Doctor { get; private set; }
+
+        public Doctor Doctor1
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
         public Appointment(string _name, double _price, Doctor _doctor)
         {

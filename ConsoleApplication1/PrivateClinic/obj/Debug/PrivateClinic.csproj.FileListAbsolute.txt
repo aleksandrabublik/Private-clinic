@@ -22,3 +22,4 @@ C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic
 C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
 C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.exe
 C:\Users\Максим\Documents\Private-clinic\ConsoleApplication1\PrivateClinic\obj\Debug\PrivateClinic.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2015\Projects\PrivateClinic\ConsoleApplication1\PrivateClinic\bin\Debug\PrivateClinic.exe.config

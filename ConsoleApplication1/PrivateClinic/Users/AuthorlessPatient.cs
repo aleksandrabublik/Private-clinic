@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrivateClinic.Users
+﻿namespace PrivateClinic.Users
 {
     public class AuthorlessPatient : User
     {
@@ -13,6 +7,29 @@ namespace PrivateClinic.Users
             FirstName = _fName;
             LastName = _lName;
             Role = "Authorless patient";
+        }
+
+        public Historyes.History History
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+        public Appointments.PriceListAppointments PriceListAppointments
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
         }
     }
 }

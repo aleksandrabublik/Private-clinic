@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using PrivateClinic.Drugs;
 using PrivateClinic.Users;
@@ -17,6 +15,7 @@ namespace PrivateClinic.Historyes
         public string Prescription { get; private set; }
         public CourseTreatment Course { get; private set; }
         public List<Medicine> DrugList { get; private set; }
+
 
         public History(
             AuthorlessPatient _patient,
@@ -89,6 +88,18 @@ namespace PrivateClinic.Historyes
 
         }
 
+
+        public CourseTreatment CourseTreatment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
 
 
     }

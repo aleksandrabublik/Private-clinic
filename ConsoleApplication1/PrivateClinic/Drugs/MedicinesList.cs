@@ -7,6 +7,19 @@ namespace PrivateClinic.Drugs
     {
         public List<Medicine> ListMedicines { get; set; }
         public List<string> ListSuppliers { get; set; }
+
+        public Medicine Medicine
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         public MedicinesList()
         {
             ListMedicines = new List<Medicine>();

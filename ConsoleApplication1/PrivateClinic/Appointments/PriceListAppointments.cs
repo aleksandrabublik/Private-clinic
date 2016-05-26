@@ -10,6 +10,18 @@ namespace PrivateClinic.Appointments
     {
         public string Name { get; private set; }
 
+        public Appointment Appointment
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
         private List<Appointment> ListAppointment;
 
         public PriceListAppointments(string _name)

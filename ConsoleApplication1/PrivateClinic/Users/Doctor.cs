@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PrivateClinic.Historyes;
+﻿using PrivateClinic.Historyes;
 
 namespace PrivateClinic.Users
 {
@@ -15,11 +10,25 @@ namespace PrivateClinic.Users
             LastName = _lName;
             Role = "Doctor";
         }
+
         public History CreateHistory(AuthorlessPatient _patient)
         {
             History NewHistory = new History(_patient, this);
             return NewHistory;
 
         }
+
+        public History History
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
+
     }
 }

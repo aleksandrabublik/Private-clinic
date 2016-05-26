@@ -1,57 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="PrivateClinic.Appointments.Appointment">
-    <Position X="4.75" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQgAAAAEAAAABAQAAAAAAAQAAAAAAAAAgAA=</HashCode>
-      <FileName>Appointments\Appointment.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Appointments.PriceListAppointments">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAAAAAABAQAAAAEAAAAAAgAAAAAgAA=</HashCode>
-      <FileName>Appointments\PriceListAppointments.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Drugs.Medicine">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAgAAAAAYAAABAAAAAAgAQAQAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Drugs\Medicine.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Drugs.MedicinesList">
-    <Position X="2.25" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAECAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Drugs\MedicinesList.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Historyes.CourseTreatment">
-    <Position X="0.5" Y="3.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Historyes\CourseTreatment.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PrivateClinic.Historyes.History">
-    <Position X="2.25" Y="3.75" Width="1.5" />
+    <Position X="13" Y="4.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -59,55 +9,144 @@
       <HashCode>AAARAAEAEAAAAAACAIBAIIBAAAAAAAAACAAEIAAAAAA=</HashCode>
       <FileName>Historyes\History.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CourseTreatment" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="PrivateClinic.Schedulies.Scheduling">
-    <Position X="4.75" Y="3.75" Width="1.5" />
+  <Class Name="PrivateClinic.Historyes.CourseTreatment" Collapsed="true">
+    <Position X="13" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Schedulies\Scheduling.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Users.Administrator" Collapsed="true">
-    <Position X="6.75" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Users\Administrator.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Users.AuthorlessPatient" Collapsed="true">
-    <Position X="11.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Users\AuthorlessPatient.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Historyes\CourseTreatment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PrivateClinic.Users.Doctor" Collapsed="true">
-    <Position X="15.75" Y="4.25" Width="1.5" />
+    <Position X="10.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAA=</HashCode>
       <FileName>Users\Doctor.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="History" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="PrivateClinic.Users.Nurse" Collapsed="true">
-    <Position X="9" Y="4.25" Width="1.5" />
+  <Class Name="PrivateClinic.Users.AuthorlessPatient">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="PriceListAppointments" Type="PrivateClinic.Appointments.PriceListAppointments" FixedFromPoint="true">
+      <Path>
+        <Point X="10.5" Y="5.347" />
+        <Point X="8.75" Y="5.347" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Users\Nurse.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Users\AuthorlessPatient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="History" />
+      <Property Name="PriceListAppointments" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Appointments.PriceListAppointments">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAABAQAQAAEAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>Appointments\PriceListAppointments.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Appointment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Schedulies.Record">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <AssociationLine Name="Appointment" Type="PrivateClinic.Appointments.Appointment">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.28" Y="0.527" Height="0.182" Width="1.091" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="AuthorlessPatient" Type="PrivateClinic.Users.AuthorlessPatient" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="5.296" />
+        <Point X="6.375" Y="5.296" />
+        <Point X="6.375" Y="4.892" />
+        <Point X="10.5" Y="4.892" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.179" Y="0.182" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAABAAAQAAQAAABAAAAAAAACAA=</HashCode>
+      <FileName>Schedulies\Record.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Appointment" />
+      <Property Name="AuthorlessPatient" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Schedulies.Scheduling" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Record" Type="PrivateClinic.Schedulies.Record">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.962" Y="0.551" Height="0.182" Width="0.778" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAACAAAAAAEAABAIAAAAAAAAABAA=</HashCode>
+      <FileName>Schedulies\Scheduling.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Record" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Users.Administrator">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAABAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users\Administrator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Scheduling" />
+      <Property Name="MedicinesList" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Drugs.MedicinesList" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAECAgAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Drugs\MedicinesList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Medicine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PrivateClinic.Drugs.Medicine" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAYAAABAAAAAAgAQAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Drugs\Medicine.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PrivateClinic.Users.Operator" Collapsed="true">
-    <Position X="13.5" Y="4.25" Width="1.5" />
+  <Class Name="PrivateClinic.Appointments.Appointment" Collapsed="true">
+    <Position X="4.25" Y="6.5" Width="1.5" />
+    <AssociationLine Name="Doctor1" Type="PrivateClinic.Users.Doctor">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.393" Y="0.491" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Users\Operator.cs</FileName>
+      <HashCode>CAAAAAAAAQgAAAAEAAAABAQAAAAAAAQAAAAAAAAAgAA=</HashCode>
+      <FileName>Appointments\Appointment.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="PrivateClinic.Users.User" Collapsed="true">
-    <Position X="11.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAEEAAAAIAAAAAAAAAAAAQAAAAAAg=</HashCode>
-      <FileName>Users\User.cs</FileName>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Doctor1" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
