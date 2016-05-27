@@ -64,10 +64,10 @@ namespace PrivateClinic.Appointments
         {
             string pricelist = "";
 
-            pricelist += "Price list:\n";
+            pricelist += " ***  LIST APPOINTMENTS *** \n";
             for (int i = 0; i < ListAppointment.Count(); i++)
             {
-                pricelist += (i + 1) +  ". " + ListAppointment[i].toString() + "\n";
+                pricelist += (i + 1) +  ".\t" + ListAppointment[i].toString() + "\n";
             }
 
             return pricelist;

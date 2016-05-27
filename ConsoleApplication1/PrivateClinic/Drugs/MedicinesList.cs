@@ -47,16 +47,17 @@ namespace PrivateClinic.Drugs
         }
         virtual public void PrintInfo()
         {
+            Console.WriteLine(" ***  MEDICINES LIST  *** ");
             foreach (Medicine mes in ListMedicines)
             {
-                Console.WriteLine("------------------AllMedicine--------------------");
-                Console.WriteLine("Medicine name: " + mes.Name);
-                Console.WriteLine("MfnufactureDate: " + mes.YearManufacture);
-                Console.WriteLine("ExpirationDate: " + mes.ExpirationDate);
-                Console.WriteLine("Fabricator: " + mes.Fabricator);
-                Console.WriteLine("IssuedPrescription:");
+                int i = 1;
+                Console.WriteLine(i++ + ".\tMedicine name: " + mes.Name);
+                Console.WriteLine("\tManufacture date: " + mes.YearManufacture);
+                Console.WriteLine("\tExpiration date: " + mes.ExpirationDate);
+                Console.WriteLine("\tFabricator: " + mes.Fabricator);
+                Console.Write("\tPrescription: ");
                 Console.WriteLine(mes.IssuedPrescription ? "Need" : "Don't need");
-                Console.WriteLine("Price: " + mes.Price);
+                Console.WriteLine("\tPrice: " + mes.Price);
             }
 
         }

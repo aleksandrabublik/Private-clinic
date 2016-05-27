@@ -47,8 +47,8 @@ namespace PrivateClinic.Schedulies
 
             info += Patient.FirstName + " " + Patient.LastName + "\n";
             info += "-------------------------------------\n";
-            info += "Date: " + Date.Day + " " + Date.Month + " " + Date.Year + "\n";
-            info += "Time: " + Date.Hour + ":" + Date.Minute + "\n";
+            info += "Date: " + Date.ToLongDateString() + "\n";
+            info += "Time: " + Date.ToLongTimeString() + "\n";
             info += "-------------------------------------\n";
             info += "Procedure | " + Procedure.Name + "\n";
             info += "Doctor    | " + Procedure.Doctor.FirstName + " " + Procedure.Doctor.LastName +  "\n";

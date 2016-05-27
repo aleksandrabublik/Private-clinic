@@ -67,19 +67,18 @@ namespace PrivateClinic.Historyes
             Console.WriteLine();
             Console.WriteLine("\t\t\tHistory");
             Console.WriteLine();
-            Console.WriteLine("Patient: {0} {1}", PatientAccount.FirstName, PatientAccount.LastName);
-            Console.WriteLine();
-            Console.WriteLine("Doctor: {0} {1}.", DoctorAccount.FirstName, DoctorAccount.LastName);
+            Console.WriteLine("Patient:\t{0} {1}", PatientAccount.FirstName, PatientAccount.LastName);
+            Console.WriteLine("Doctor:\t{0} {1}.", DoctorAccount.FirstName, DoctorAccount.LastName);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\t\tCourse of treatment");
             Console.WriteLine();
             Console.WriteLine(Course.Treatment);
             Console.WriteLine();
-            Console.Write("Drugs: ");
+            Console.WriteLine("Drugs: ");
             for (int i = 0; i < DrugList.Count(); i ++ )
             {
-                Console.WriteLine("Name:" + i+1 + " " + DrugList[i].Name);
+                Console.WriteLine(i+1 +"\t" + DrugList[i].Name);
             }
                
             Console.WriteLine();

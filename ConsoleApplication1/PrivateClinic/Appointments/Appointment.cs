@@ -72,9 +72,9 @@ namespace PrivateClinic.Appointments
         {
             string info = "";
 
-            info += "\"" + Name + "\"\t";
+            info += "\"" + Name + "\"\t— ";
             info += "doctor: " + Doctor.FirstName + " " + Doctor.LastName + ", ";
-            info += "price: $" + Price + ")";
+            info += "price: $" + Price + "\n";
 
             return info;
         }

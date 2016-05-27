@@ -33,17 +33,10 @@ namespace PrivateClinic.Schedulies
 
         public void PrintSchedule()
         {
-            Console.WriteLine("Records: ");
+            Console.WriteLine(" *** SCHEDULING *** ");
             for (int i = 0; i < Schedule.Count(); i++)
             {
-
                 Console.WriteLine(Schedule[i].toString());
-
-                Console.WriteLine("Record Time:" + Schedule[i].Date.ToString("F", CultureInfo.CreateSpecificCulture("en-US")));
-                Console.WriteLine();
-                Console.WriteLine("Patient Name: " + Schedule[i].Patient.FirstName + " " + Schedule[i].Patient.LastName);
-                Console.WriteLine();
-                Console.WriteLine("Doctor Name: " + Schedule[i].Procedure.Doctor.FirstName + " " + Schedule[i].Procedure.Doctor.LastName);
                 Console.WriteLine();
 
             }

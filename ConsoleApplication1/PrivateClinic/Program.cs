@@ -19,12 +19,12 @@ namespace PrivateClinic
         static void Main(string[] args)
         {
 
-           //List<User> Users = testCreateUsers();
-           //testLoginUsers(Users);
-            //testDrugs();
-            //testAppointnents();
-            //testHistories();
-            testSchedulies();
+           List<User> Users = testCreateUsers();
+           testLoginUsers(Users);
+           testDrugs();
+           testAppointnents();
+           testHistories();
+           testSchedulies();
         }
 
         static List<User> testCreateUsers()
@@ -32,7 +32,7 @@ namespace PrivateClinic
             List<User> Users = new List<User>();
 
             Console.WriteLine();
-            Console.WriteLine(" ***  CREATE USER  *** ");
+            Console.WriteLine(" ***  CREATE USERS  *** ");
             Console.WriteLine();
 
             string f_name, l_name;
@@ -203,7 +203,7 @@ namespace PrivateClinic
                 ex = "a";
                 while (ex == "a")
                 {
-                    Console.Write("Create new appointment? (y/n): "); ;
+                    Console.Write("Create new appointment? (y/n): ");
                     ex = Console.ReadLine();
                     if (ex == "n")
                     {
@@ -295,19 +295,21 @@ namespace PrivateClinic
         static void testHistories() {
             string Prescription, CourseTreatmen, Recomendation;
 
-            Medicine Aspirin = new Medicine("Aspirin", new DateTime(1996, 01, 01), new DateTime(2010, 01, 01), "Zavod Pupkina", true, 3);
+            Medicine Tea = new Medicine("Tea", new DateTime(1996, 01, 01), new DateTime(2010, 01, 01), "Zavod Pupkina", true, 3);
 
-            Console.WriteLine("---------------------- Test History -----------------------------");
+            Console.WriteLine(" *** HISTORY *** ");
             AuthorlessPatient Patient = new AuthorlessPatient("Super", "Max");
             Doctor Docer = new Doctor("Gregory", "House");
             History newHistory = Docer.CreateHistory(Patient);
+
             newHistory.CreateDrageList();
 
             Console.WriteLine("Write some Prescription");
             Prescription = Console.ReadLine();
             newHistory.EditPrescription(Prescription);
-            Console.WriteLine("Add some drugs");
-            newHistory.AddDragsForPatient(Aspirin);
+
+            Console.WriteLine("Add some drugs: Tea");
+            newHistory.AddDragsForPatient(Tea);
 
             Console.WriteLine("Add some recomendation");
             Recomendation = Console.ReadLine();
@@ -315,7 +317,7 @@ namespace PrivateClinic
 
 
             Console.WriteLine("Write Course Treatment for patient");
-            CourseTreatmen = Patient.FirstName + Patient.LastName + ", " + Console.ReadLine();
+            CourseTreatmen = Console.ReadLine();
             CourseTreatment CourseTreatmentForPatient = new CourseTreatment(CourseTreatmen);
             newHistory.CreateCourseTreatment(CourseTreatmentForPatient);
 
@@ -323,38 +325,48 @@ namespace PrivateClinic
         }
         static void testSchedulies() {
             bool exit = false;
-            
+
+            Console.WriteLine(" *** SCHEDULING *** ");
+
             while (!exit)
             {
+                Administrator Admin = new Administrator("Supet", "Max");
+                Scheduling Schedule = Admin.CreateScheduling();
                 try
-                     {
-                            Administrator Admin = new Administrator("Supet", "Max");
-                            Scheduling NewSchedule = Admin.CreateScheduling();
-                            Doctor Docer = new Doctor("Gregory", "House");
-                            Appointment Procedura = new Appointment("Klizma", 50, Docer);
-                            AuthorlessPatient Patient = new AuthorlessPatient("Super", "Vlad");
-                            Console.WriteLine("Chose time");
-                          //  DateTime data = Convert.ToDateTime(Console.ReadLine());
-                            DateTime date1 = Convert.ToDateTime(Console.ReadLine());// new DateTime(2008, 4, 10, 6, 30, 0);
+                {
+                    Console.Write("Your first name: ");
+                    string fName = Console.ReadLine();
+                    Console.Write("Your last name: ");
+                    string lName = Console.ReadLine();
+                    AuthorlessPatient Patient = new AuthorlessPatient(fName, lName);
 
-                            Record newRecord = new Record(Procedura, Patient, date1);
-                            NewSchedule.Schedule.Add(newRecord);
+                    Doctor Doct = new Doctor("Gregory", "House");
+                    Console.Write("Procedure: ");
+                    string nameApp = Console.ReadLine();
+                    Appointment Procedura = new Appointment(nameApp, 50, Doct);
+
+                    Console.Write("Chose time: ");
+                    DateTime date = Convert.ToDateTime(Console.ReadLine());
+
+                    Record newRecord = new Record(Procedura, Patient, date);
+                    Schedule.Schedule.Add(newRecord);
 
 
-                             string a = "a";
-                                while (a == "a")
-                                {
-                                    Console.Write("Add new procedure? (y/n): "); ;
-                                    a = Console.ReadLine();
-                                    if (a == "n")
-                                    {
-                                        exit = true;
-                                        NewSchedule.PrintSchedule();
-                                        Console.WriteLine();
+                    string a = "a";
+                    while (a == "a")
+                    {
+                        Console.Write("Add new procedure? (y/n): "); ;
+                        a = Console.ReadLine();
+                        if (a == "n")
+                        {
+                            exit = true;
+                            Schedule.PrintSchedule();
+                            Console.WriteLine();
 
-                                    }
-                                }
-                       }
+                        }
+                    }
+                    Console.WriteLine();
+                }
                 catch (Exception e)
                 {
                     Console.WriteLine();
