@@ -1,0 +1,6 @@
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\bin\Debug\PrivateClinic.exe.config
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\bin\Debug\PrivateClinic.exe
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\bin\Debug\PrivateClinic.pdb
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.csprojResolveAssemblyReference.cache
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.exe
+c:\users\яна\documents\visual studio 2015\Projects\PrivateClinic\PrivateClinic\obj\Debug\PrivateClinic.pdb
